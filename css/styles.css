@@ -366,14 +366,8 @@ div a:focus, div button:focus {
     }
 
     .stripe::after {
-        /* position: absolute;
-        content: "";
-        width: 108%; */
         height: 17px;
-        /* right: -4%;  */
         bottom: 7px;
-        /* background: var(--accent-color);
-        z-index: -1; */
     }
 
     .text {
