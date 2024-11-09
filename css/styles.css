@@ -1,0 +1,400 @@
+:root {
+    --accent-color: #0d6ca9;
+    --hover-color: cyan;
+    --primary-color: #f5f1f1;
+}    
+
+/* General styling for body */
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+    font-family: 'Lato', sans-serif;
+}
+
+/* Adding container to center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling the logo with a stripe */
+h1 {
+    font-size: 30px;
+    font-family: 'playfair Display', serif;
+    position: relative;
+}
+
+.stripe {
+    position: relative;
+    display: inline-block;
+}
+
+.stripe::after {
+    position: absolute;
+    content: "";
+    width: 108%;
+    height: 15px;
+    right: -4%; 
+    bottom: 6px;
+    background: var(--accent-color);
+    z-index: -1;
+}
+
+/* Styling the nav and removing link styles */
+.nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 30px 0; 
+    top: 5px;
+    position: relative;
+    
+}
+
+nav ul {
+    display: flex;
+    gap: 10px;
+} 
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    position: relative;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+nav li { 
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+nav ul li {
+    overflow: hidden;
+    width: 120px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+nav .nav-button { 
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
+    border-radius: 50px;
+}
+
+article a:visited {
+    color: var(--hover-color);
+}
+
+/* Navigation button with hover effect */
+nav .nav-button:hover {
+    color: #111;
+    background-color: var(--hover-color);
+    border-radius: 50px;
+    transform: scale(1.2);
+}
+
+/* specific styling for contact button to act like the other buttons */
+.nav-contact {
+    border-radius: 50px;
+    border-style: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;   
+}
+
+.nav-contact:hover {
+    color: #111;
+    background-color: var(--hover-color);
+    border-radius: 50px;
+    transform: scale(1.2);
+}
+
+/* styling the skip links for visibility */
+.skip-link {
+    color: #111;
+    position: absolute;
+    left: 40%;
+    padding: 15px 15px;
+    background-color: var(--primary-color);
+    border: 6px solid red;
+    border-radius: 0 0 15px 15px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 10;
+    transform: translateY(-150%);
+    transition: top 0.4s ease, opacity 0.4s ease;
+}
+
+/* Styling hero section with a zoom animation and glow effect behind */
+.hero-wrapper {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Lato', serif;
+    box-shadow: 0 0 81px -1px rgba(158,154,112,0.30);
+}
+
+.hero-wrapper p {
+    font-size: 14px;
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+    animation: zoom 3s infinite ease-in-out alternate;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+/* Text styling for the hero section */ 
+.text {
+    position: absolute;
+    color: var(--primary-color);
+    z-index: 5;
+    bottom: 40px;
+    left: 30px;
+}
+
+.text > h2 {
+    margin: 0 auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.text > p {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.heading {
+    font-size: 36px;
+    margin: 0;
+}
+
+.colorShift {
+    font-weight: 900;
+    background: -webkit-linear-gradient(0deg, blue, cyan);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textscroll 5s infinite alternate;
+}
+
+@keyframes textscroll {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+/* Styling the planets in a grid */
+.locals {
+    margin-top: 40px;
+}
+
+.locals h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.section-grid {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.grid {
+    text-align: center;
+}
+
+.grid img {
+    width: 120px;
+    height: auto;
+}
+
+.grid h3 {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* Button styling for the learn more links */
+article > a > button {
+    border-radius: 50px;
+    border-style: none;
+    background-color: purple;
+    color: var(--primary-color);
+    padding: 5px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.learn-earth, .learn-mars {
+    background-color: var(--accent-color);
+}
+
+article > a > button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.2);
+    color: #111;
+}
+
+main {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(21, 21, 21);
+    padding: 0 0 40px 0;
+}
+
+/* Styling the footer to be centered */
+footer {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* focus state styling on links and buttons */
+.skip-link:focus {
+    transform: translateY(-20%);
+    outline: none;
+}
+
+div a:focus, div button:focus {
+    outline: 4px solid red;
+    border-radius: 50px; 
+}
+
+/* Media query for 900px breakpoint */
+@media (max-width: 900px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stripe {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .stripe::after {
+        width: 108%;
+        height: 12px;
+        right: -4%; 
+        bottom: 4.5px;
+    }
+
+    .locals {
+        text-align: center;
+    }
+
+    .locals h2 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    .section-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .grid img {
+        width: 240px;
+        height: auto;
+    }
+
+    .hero-wrapper {
+        max-height: 500px;
+    }
+
+    .text h2 {
+        font-size: 28px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+}
+
+/* Media query for 400px breakpoint */
+@media (max-width: 400px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .hero-wrapper {
+        border-radius: 20px;
+        height: 800px;
+    }
+
+    .hero-img {
+        height: 100%;
+        object-fit: cover;
+    }    
+
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 0 auto;
+    }
+   
+    h1 {
+        font-size: 36px;
+    }
+
+    .stripe::after {
+        /* position: absolute;
+        content: "";
+        width: 108%; */
+        height: 17px;
+        /* right: -4%;  */
+        bottom: 7px;
+        /* background: var(--accent-color);
+        z-index: -1; */
+    }
+
+    .text {
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .text p {
+        font-size: 16px;
+    }
+
+    .text h2 {
+        font-size: 40px;
+    }
+
+    article > a > button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The System</title>
+    
+    <!-- Links to Google fonts and Stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Skip Links for accessibility -->
+    <a href="#nav-bar" class="skip-link">Skip to nav</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Container to center all content -->
+    <div class="container">
+        <header class="nav-bar" role="banner">
+                <h1>THE &nbsp;<span class="stripe">SYSTEM</span></h1>
+                <nav role="navigation">
+                    <ul>
+                        <li><a href="#" class="nav-button">Planets</a></li>
+                        <li><a href="#"class="nav-button">Interstellar</a></li>
+                        <li><a href="#" class="nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <main role="main"> 
+            <!-- Hero section with image and text on top -->
+            <section class="hero-wrapper" role="region" aria-labelledby="hero-heading">
+                <div class="text">
+                    <p>THE &nbsp; SYSTEM &nbsp; MAGAZINE</p>
+                    <h2 class="heading">Welcome to the <span class="colorShift">Solar System</span></h2>
+                    <P>Take a tour around the coolest stellar system around.</P>
+                </div>
+                <img class="hero-img" src="images/milky-way.jpg" alt="Image of a milky way">
+            </section>
+        
+            <!-- Section with planets and learn more buttons -->
+            <section class="locals" role="region" aria-labelledby="locals-heading">
+                <h2>Meet the Locals</h2>
+                <div class="section-grid">
+                    <article class="grid" role="article">
+                        <img src="images/sun.jpg" alt="Image of the Sun">
+                        <h3>The Sun</h3>
+                        <a href="https://en.wikipedia.org/wiki/Sun" class="learn-more"><button>Learn More</button></a>
+                    </article>
+
+                    <article class="grid" role="article">
+                        <img src="images/mercury.jpg" alt="Image of Mercury">
+                        <h3>Mercury</h3>
+                        <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" class="learn-more"><button>Learn More</button></a>
+                    </article>
+
+                    <article class="grid" role="article">
+                        <img src="images/venus.jpg" alt="Image of venus">
+                        <h3>Venus</h3>
+                        <a href="https://en.wikipedia.org/wiki/Venus" class="learn-more"><button>Learn More</button></a>
+                    </article>
+
+                    <article class="grid" role="article">
+                        <img src="images/earth.jpg" alt="Image of Earth">
+                        <h3>Earth</h3>
+                        <a href="https://en.wikipedia.org/wiki/Earth" class="learn-more"><button class="learn-earth">Learn More</button></a>
+                    </article>
+
+                    <article class="grid" role="article">
+                        <img src="images/moon.jpg" alt="Image of the Moon">
+                        <h3>The Moon</h3>
+                        <a href="https://en.wikipedia.org/wiki/Moon" class="learn-more"><button>Learn More</button></a>
+                    </article>
+
+                    <article class="grid" role="article">
+                        <img src="images/mars.jpg" alt="Image of Mars">
+                        <h3>Mars</h3>
+                        <a href="https://en.wikipedia.org/wiki/Mars" class="learn-more"><button class="learn-mars">Learn More</button></a>
+                    </article>
+                </div>
+            </section>
+        </main> 
+
+        <!-- Footer with copyright information -->
+        <footer role="contentinfo">&copy; 2024 - The System
+        </footer>
+    </div>
+    
+</body>
+</html>
